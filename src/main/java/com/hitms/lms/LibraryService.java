@@ -35,7 +35,9 @@ public class LibraryService {
         issuedBooks.put(key, issueDate);
         return true;
     }
-
+   /**
+     * Adds a book to the library. Returns false if it already exists.
+     */
     public boolean isAvailable(String title) {
         return !issuedBooks.containsKey(normalize(title));
     }
