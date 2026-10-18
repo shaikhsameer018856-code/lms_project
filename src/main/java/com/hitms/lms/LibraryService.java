@@ -50,4 +50,7 @@ public class LibraryService {
         long lateDays = Math.max(0, daysKept - LOAN_DAYS);
         return lateDays * FINE_PER_DAY;
     }
+        public boolean hasBook(String title) {
+        return books.contains(normalize(title));
+    }
 }
