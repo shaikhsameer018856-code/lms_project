@@ -33,10 +33,10 @@ public class LibraryService {
         return books.size();
     }
 
-    /**
-     * Issues a book. Returns false if the input is invalid
-     * or the book is already issued.
+       /**
+     * Issues a single copy; throws BookUnavailableException if none left
      */
+    
     public boolean issueBook(String title, LocalDate issueDate) {
         if (title == null || title.trim().isEmpty() || issueDate == null) {
             return false;
