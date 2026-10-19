@@ -33,9 +33,8 @@ public class LibraryService {
         return books.size();
     }
 
-    /**
-     * Issues a book. Returns false if the input is invalid
-     * or the book is already issued.
+        /**
+     * Issues one copy of the given title from the catalogue
      */
     public boolean issueBook(String title, LocalDate issueDate) {
         if (title == null || title.trim().isEmpty() || issueDate == null) {
