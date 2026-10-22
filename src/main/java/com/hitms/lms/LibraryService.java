@@ -33,11 +33,10 @@ public class LibraryService {
         return books.size();
     }
 
-    /**
-     * * Issues one copy of the given title from the catalogue;
-     * throws BookUnavailableException if no copies are left.
-     * >>>>>>> feature/update-docs
-     */
+/**
+ * Issues one copy of the given title from the catalogue;
+ * throws BookUnavailableException if no copies are left.
+ */
 
     public boolean issueBook(String title, LocalDate issueDate) {
         if (title == null || title.trim().isEmpty() || issueDate == null) {
