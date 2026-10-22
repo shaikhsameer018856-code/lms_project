@@ -38,6 +38,18 @@ public class LibraryService {
  * throws BookUnavailableException if no copies are left.
  */
 
+private final java.util.Map<String, String> members = new java.util.HashMap<>();
+
+/**
+ * Finds a member's name by their ID.
+ * Returns null if the ID is invalid or not found.
+ */
+public String findMemberById(String memberId) {
+    if (memberId == null || memberId.trim().isEmpty()) {
+        return null;
+    }
+    return members.get(memberId.trim());
+}
     public boolean issueBook(String title, LocalDate issueDate) {
         if (title == null || title.trim().isEmpty() || issueDate == null) {
             return false;
